@@ -1,13 +1,13 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www.)?flsweb.kz$
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /public/$1
-RewriteCond %{HTTP_HOST} ^(www.)?flsweb.kz$
-RewriteRule ^(/)?$ public/index.php [L]
-
-
 #RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^(www.)?flsweb.kz$
+#RewriteCond %{REQUEST_URI} !^/public/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /public/$1
+#RewriteCond %{HTTP_HOST} ^(www.)?flsweb.kz$
+#RewriteRule ^(/)?$ public/index.php [L]
 
-#RewriteRule (.*) public/$1
+
+RewriteEngine on
+
+RewriteRule (.*) public/$1
